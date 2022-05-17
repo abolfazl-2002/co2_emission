@@ -3,20 +3,22 @@ clc;
 close all;
 
 %% Data Analysis
-
-% read data
 data = readtable('CO2 Emissions.csv');  % read csv file
 data = table2dataset(data);             % convert table to structure
 
 Engine_Size = data(:,4);
 Co2_Emissions = data(:,12);
 
+x = 0:0.1:100;
+
 % plot data
 figure(1);
 hold on
-scatter(Engine_Size,Co2_Emissions);
+% scatter(data(:,4),Co2_Emissions));
+scatter(data(:,8),Co2_Emissions);
+plot(x , 2x);
 xlabel('Engine Size');
 ylabel('Co2 Emissions');
-hold off
+ hold
 
 
